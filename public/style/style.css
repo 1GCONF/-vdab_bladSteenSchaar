@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-shadow: 0 4px 4px rgba(25, 25, 25, 0.25);
+  font-family: "Kameron", serif;
+  font-weight: 200;
+}
+
+html li {
+  list-style-type: none;
+}
+
+body {
+  font-size: 21px;
+  background-color: rgba(255, 255, 255, 0.29);
+}
+body > * {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(98, 98, 98, 0.16);
+}
+body .section_spelbord {
+  min-height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+body .section_spelbord .spelbord {
+  width: 60%;
+  height: 75%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "npc_wapen npc_naam npc_naam" "battleground battleground battleground" "speler_naam speler_naam speler_wapen";
+  gap: 0px;
+}
+body .section_spelbord .spelbord .bord_element {
+  width: 100%;
+  outline: 2px solid;
+}
+body .section_spelbord .spelbord .bord_element.wapen {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+body .section_spelbord .spelbord .bord_element.wapen .wapen_list {
+  transform: rotate(45deg);
+}
+body .section_spelbord .spelbord .bord_element.wapen .wapen_list > li.wapen_li.speler_wapen {
+  cursor: pointer;
+}
+body .section_spelbord .spelbord .bord_element.wapen .wapen_list > li.wapen_li.speler_wapen:hover {
+  opacity: 0.3;
+}
+body .section_spelbord .spelbord .npc_wapen {
+  grid-area: npc_wapen;
+}
+body .section_spelbord .spelbord .npc_naam {
+  grid-area: npc_naam;
+  display: grid;
+  align-items: center;
+}
+body .section_spelbord .spelbord .npc_naam_text {
+  text-align: center;
+}
+body .section_spelbord .spelbord .battleground {
+  grid-area: battleground;
+  display: grid;
+  align-items: center;
+}
+body .section_spelbord .spelbord .battleground_text {
+  text-align: center;
+}
+body .section_spelbord .spelbord .speler_naam {
+  grid-area: speler_naam;
+  display: grid;
+  align-items: center;
+}
+body .section_spelbord .spelbord .speler_naam .speler_naam_text {
+  text-align: center;
+}
+body .section_spelbord .spelbord .speler_wapen {
+  grid-area: speler_wapen;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&display=swap");
+@mixin centerAbsolute {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin grid-align-center{
+  display: grid;
+  align-items: center;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // box-shadow: 0 4px 4px #100e1277;
+  text-shadow: 0 4px 4px rgba(25, 25, 25, 0.25);
+  font-family: "Kameron", serif;
+  font-weight: 200;
+}
+html {
+  li {
+    list-style-type: none;
+  }
+}
+body {
+  font-size: 21px;
+  background-color: rgba(255, 255, 255, 0.29);
+  & > * {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(98, 98, 98, 0.16);
+  }
+  .section_spelbord {
+    // border: 0.5ch solid magenta;
+    min-height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    .spelbord {
+      width: 60%;
+      height: 75%;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "npc_wapen npc_naam npc_naam"
+        "battleground battleground battleground"
+        "speler_naam speler_naam speler_wapen";
+      gap: 0px;
+      // border: 0.5ch solid magenta;
+      .bord_element {
+        width: 100%;
+        outline: 2px solid;
+        &.wapen {
+          @include grid-align-center;
+          justify-items: center;
+          .wapen_list {
+            transform: rotate(45deg);
+            & > li.wapen_li.speler_wapen{
+                cursor: pointer;
+                &:hover{
+                    opacity: 0.3;
+                }
+            }
+          }
+        }
+      }
+      .npc_wapen {
+        grid-area: npc_wapen;
+      }
+      .npc_naam {
+        grid-area: npc_naam;
+        @include grid-align-center;
+        &_text{
+          text-align: center;
+        }
+      }
+      .battleground {
+        grid-area: battleground;
+        @include grid-align-center;
+        &_text{
+          text-align: center;
+        }
+      }
+      .speler_naam {
+        grid-area: speler_naam;
+        @include grid-align-center;
+        .speler_naam_text{
+          text-align: center;
+        }
+      }
+      .speler_wapen {
+        grid-area: speler_wapen;
+      }
+    }
+  }
+}
