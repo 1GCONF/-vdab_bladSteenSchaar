@@ -46,7 +46,7 @@ window.onload = () => {
       const spelbord_element = document.createElement("div");
       spelbord_element.classList.add("bord_element");
       spelbord_element.classList.add(element);
-      // Append wapen image-buttons  
+      // Append wapen image-buttons
       if (element === "npc_wapen" || element === "speler_wapen") {
         const ul = document.createElement("ul");
         ul.className = "wapen_list";
@@ -72,23 +72,23 @@ window.onload = () => {
         spelbord_element.append(ul);
       }
       // Append npc naam
-      if( element==="npc_naam"){
-        const h2=document.createElement("h2");
-        h2.className=`${element}_text`;
-        h2.textContent=npc.naam;
+      if (element === "npc_naam") {
+        const h2 = document.createElement("h2");
+        h2.className = `${element}_text`;
+        h2.textContent = npc.naam;
         spelbord_element.append(h2);
       }
       // Append battleground h1
-      if(element==="battleground"){
-        const h1=document.createElement("h2");
+      if (element === "battleground") {
+        const h1 = document.createElement("h2");
         h1.classList.add(`${element}_text`);
         spelbord_element.append(h1);
       }
       // Append speler naam
-      if( element==="speler_naam"){
-        const h2=document.createElement("h2");
-        h2.className=`${element}_text`;
-        h2.textContent=speler.naam;
+      if (element === "speler_naam") {
+        const h2 = document.createElement("h2");
+        h2.className = `${element}_text`;
+        h2.textContent = speler.naam;
         spelbord_element.append(h2);
       }
       spelbord.append(spelbord_element);
@@ -100,7 +100,7 @@ window.onload = () => {
   }
   function toonResultaat(resultaat) {
     console.log(resultaat);
-    document.querySelector(".battleground_text").innerHTML=resultaat;
+    document.querySelector(".battleground_text").innerHTML = resultaat;
   }
   tekenSpelbord();
   const wapen_elements = document.querySelectorAll(".wapen_li.speler_wapen");
@@ -118,7 +118,7 @@ window.onload = () => {
       ) {
         resultaat = `Gewonnen: (${keuze_speler}) vs (${keuze_npc})`;
       } else {
-        resultaat =  `Verloren: (${keuze_speler}) vs (${keuze_npc})`;
+        resultaat = `Verloren: (${keuze_speler}) vs (${keuze_npc})`;
       }
       toonResultaat(resultaat);
     });

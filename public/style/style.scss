@@ -6,7 +6,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-@mixin grid-align-center{
+@mixin grid-align-center {
   display: grid;
   align-items: center;
 }
@@ -58,11 +58,11 @@ body {
           justify-items: center;
           .wapen_list {
             transform: rotate(45deg);
-            & > li.wapen_li.speler_wapen{
-                cursor: pointer;
-                &:hover{
-                    opacity: 0.3;
-                }
+            & > li.wapen_li.speler_wapen {
+              cursor: pointer;
+              &:hover {
+                opacity: 0.3;
+              }
             }
           }
         }
@@ -73,21 +73,21 @@ body {
       .npc_naam {
         grid-area: npc_naam;
         @include grid-align-center;
-        &_text{
+        &_text {
           text-align: center;
         }
       }
       .battleground {
         grid-area: battleground;
         @include grid-align-center;
-        &_text{
+        &_text {
           text-align: center;
         }
       }
       .speler_naam {
         grid-area: speler_naam;
         @include grid-align-center;
-        .speler_naam_text{
+        .speler_naam_text {
           text-align: center;
         }
       }
